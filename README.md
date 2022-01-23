@@ -1,4 +1,4 @@
-<a href="https://eprof1.github.io/IOT/" target="_blank">GitHub IoT Pages</a>
+<a href="https://eprof1.github.io/IOT2/" target="_blank">GitHub IoT Pages</a>
 
 Assignment Links
 * <a href="https://eprof1.github.io/IOT/IOTP01/IOTP01.html" target="_blank">IOTP01-Single Board Computers</a>
@@ -22,6 +22,9 @@ Assignment Links
 * <a href="https://eprof1.github.io/IOT/NR01/NR01.html" target="_blank">NR01-Node-RED on RPi</a>
 * <a href="https://eprof1.github.io/IOT/NR02/NR02.html" target="_blank">NR02-Node-RED Flows</a>
 * <a href="https://eprof1.github.io/IOT/NR03/NR03.html" target="_blank">NR03-Node-RED sensors</a>
+
+PgP 1/23/2022
+ * creating IoT2, using DexPiRed2 image with all software for spring2022
 
 PgP 7/31/2021
 * added assignment table
