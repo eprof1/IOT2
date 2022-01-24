@@ -2,8 +2,8 @@
 
 Assignment Links
 * <a href="https://eprof1.github.io/IOT2/IOTP01/IOTP01.html" target="_blank">IOTP01-Single Board Computers</a>
-* <a href="https://eprof1.github.io/IOT2/IOTP02/IOTP02.html" target="_blank">IOTP02-RPi VNC</a>
-* <a href="https://eprof1.github.io/IOT2/IOTP03/IOTP03.html" target="_blank">IOTP03-RPi and PuTTY</a>
+* <a href="https://eprof1.github.io/IOT2/IOTP02/IOTP02.html" target="_blank">IOTP02-VNC-GUI RPi</a>
+* <a href="https://eprof1.github.io/IOT2/IOTP03/IOTP03.html" target="_blank">IOTP03-SSH-CLI RPi</a>
 * <a href="https://eprof1.github.io/IOT2/IOTA01/IOTA01.html" target="_blank">IOTA01-Arduino UNO Setup</a>
 * <a href="https://eprof1.github.io/IOT2/IOTB01/IOTB01.html" target="_blank">IOTB01-micro:bit Setup</a>
 * 
