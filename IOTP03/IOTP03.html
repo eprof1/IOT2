@@ -24,7 +24,7 @@
 
         <input name="InstID" type="hidden" id="InstID" value="00617282">
 
-        <h1 class="text-center">SSH-CLI Remote Control of a Raspberry Pi-Not Done Yet</h1>
+        <h1 class="text-center">SSH-CLI Remote Control of a Raspberry Pi</h1>
 
 
         <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
@@ -85,28 +85,26 @@
         <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
         <div id="Objectives" class=" collapse in col-lg-12">
 
-            <p>
-                <img src="putty.jpg" alt="PuTTY" class="img-responsive img-responsive" />PuTTY
-            	PgP-USE POWERSHELL AND SSH COMMAND
-            </p>
+            <h1>
+                SSH-Secure SHell
+            </h1>
 
             <p>
-                These instructions will show you how to download and install the PuTTY client onto your laptop.<br />
+                These instructions will show you how to use <a href="https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.2" class="bg-info text-white" target="_blank">Power Shell</a> to run the <a href="https://www.ssh.com/academy/ssh">SSH</a> protocol and software on your laptop to connect to a single-board computer(SBC).<br />
                 This software allows you to run a terminal window (CLI) on a Raspberry Pi over a network using your laptop.<br />
                 This 
                 &#39;remote access&#39; technology has revolutionized the way IT professionals work, allowing them to access numerous devices all over the world from their computer.<br />
 
-                More information on <a href="https://en.wikipedia.org/wiki/PuTTY" class="bg-info text-white" target="_blank">PuTTY</a> is available online.<br />
+                More information on <a href="https://en.wikipedia.org/wiki/Secure_Shell" class="bg-info text-white" target="_blank">Secure SHell</a> is available online.<br />
 
                 Being able to use this software will greatly simplify working with the Raspberry Pi, Arduino UNO and micro:bit.
             </p>
             <p>After completing this assignment you will be able to:</p>
             <ol>
-                <li>Obtain PuTTY client</li>
-                <li>Install PuTTY on your laptop</li>
-                <li>Connect to the Raspberry Pi using PuTTY</li>
-                <li>Issue commands to the Raspberry Pi from your laptop using PuTTY</li>
-                <li>Update/upgrade the Raspberry Pi from your laptop using PuTTY</li>
+                <li>Run PowerShell on a Windows computer</li>
+                <li>Establish an Secure SHell (SSH) between your Windows computer and a single-board computer</li>
+                <li>Issue commands to the Raspberry Pi SBC from your laptop using SSH</li>
+                <li>Update/upgrade the Raspberry Pi operating system from your laptop using SSH</li>
             </ol>
             <hr />
         </div>
@@ -124,41 +122,55 @@
                 refer to the <a href="https://learn.winona.edu/WSU_Technology_Knowledge_Base" class="bg-info text-white" target="_blank">WSU Technology Knowledge Base</a>,&nbsp; ask a teaching assistant, or ask the instructor.
             </p>
 
+			<p>
+				<a href="images/RPi3Pinout.png" class="img-responsive img-rounded" target="popup" onclick="window.open('images/RPi3Pinout.png', 'popup'); return false;">
+					<img src="images/RPi3Pinout.png" width="300" alt="Raspberry Pi 3 layout" class="img-responsive img-responsive" />
+				</a>
+				<br />
+				Figure 1-Raspberry Pi 3 B+ layout
+			</p>
+
             <hr />
         </div>
 
         <!--Exercise 1-->
 
-        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Install PuTTY</a></div>
+        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Setup the Raspberry Pi</a></div>
 
         <div id="Exercise01" class="collapse in  col-lg-12">
             <ol>
-                <li>These steps are performed on your laptop.</li>
-
-                <li>Open a browser to: <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" class="bg-info text-white" target="_blank">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html </a></li>
-
-                <li>Download and save the latest (.72 or above) 64-bit Windows version of PuTTY to your ' 
-                <code><span id="aPath"></span></code>
-                    <script>document.getElementById("aPath").innerHTML = Path; </script>
-                    ' folder.<br />
+				<li>This work is done on the Raspberry Pi.</li>
+                <li>Locate a USB keyboard and mouse.<br />
+                    Plug them into available USB ports on the right side of the Pi.<br />
+                    See Figure xx
                 </li>
 
-                <li>Use File Explorer, find the PuTTY install file, and double-click to install the program.</li>
+				<li>If the Pi is powered on, there is a steady red light in the lower left corner of the circuit board.<br />
+					If the Pi is not powered on, click the power button on the Pi, which should be on top or around the monitor in front of you.<br />
+					Below the red light is a green light that will flash, indicating CPU activity.</li>
 
-                <li>During the install of PuTTY accept all of the default settings.
-                </li>
+				<li>In the lower right corner of the landscape monitor, press the button marked with the colored dot.
+                    <br />
+					Repeatedly pressing this button toggles the monitor between displaying your laptop and the Raspberry Pi.
+				</li>
+				<li>ONLY CONNECT TO WSU GUEST NETWORK!!!<br />
+					<a href="https://eprofessor.azurewebsites.net/HelpFiles/WSU_Guest_WiFi/GuestWiFi.html" class="bg-info text-white" target="_blank">FOLLOW THESE INSTRUCTIONS</a>
+					<br />
+					When prompted make a new account, supply bogus information and log in.<br />
+					<strong>Note: periodically you will need to open the Raspberry Pi browser to 'winona.edu' or other website, and repeat the WSU Guest Network login process.</strong>
+				</li>
 
-                <li>Press the Windows key and type:
-                    <code>putty</code>
-                    , then press the &#39; Enter&#39; key to start PuTTY.
-                </li>
+				<li>In the upper right corner of the desktop click on VNC to display the Raspberry Pi IP address.<br />
 
-                <li>The first time PuTTY starts, there are no connections, so it looks like this:<br />
-                    <p>
-                        <a href="PuttyConfig.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('PuttyConfig.PNG', 'popup'); return false;">
-                            <img src="PuttyConfig.PNG" width="300" alt="VNC Viewer" class="img-responsive img-responsive" /></a>PuTTY
-                    </p>
-                </li>
+					<a href="images/Desktop.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/Desktop.PNG', 'popup'); return false;">
+						<img src="images/Desktop.PNG" width="300" alt="Raspberry Pi Desktop" class="img-responsive img-responsive" />
+					</a>
+					<br />
+					Figure 2-Raspberry Pi Desktop<br />
+					<br />
+				</li>
+
+
 
             </ol>
             <hr />
@@ -168,40 +180,12 @@
 
         <!--Exercise 2-->
 
-        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Boot the Raspberry Pi</a></div>
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Connect with PowerShell</a></div>
 
         <div id="Exercise02" class="collapse in  col-lg-12">
 
             <ol>
-                <li>These steps are performed on your Raspberry Pi.</li>
 
-                <li>Install the flash drive into the slot on the Raspberry Pi.<br />
-                    For this exercise you will not need a USB keyboard and mouse, unless you run into problems later.
-                </li>
-
-                <li>Turn on the power and allow the Raspberry Pi to boot up.</li>
-
-                <li>On the monitor press the colored dot to display the Pi desktop.<br />
-                    Because you do not have a keyboard and mouse (input devices) connected to the Raspberry Pi, you need another way to interact with it.<br />
-                    This is where the need arises to run PuTTY.<br />
-                    And this is why you enabled SSH (Securce SHell) when you originally configured your Raspberry Pi.
-                </li>
-
-                <li>Your Raspberry Pi desktop should appear after about 30 seconds.<br />
-                    If the desktop does not appear, see a teaching assistant or the professor.
-                </li>
-
-            </ol>
-            <hr />
-        </div>
-
-        <!--Exercise 3-->
-
-        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Start PuTTY</a></div>
-
-        <div id="Exercise03" class="collapse in  col-lg-12">
-
-            <ol>
                 <li>These steps are performed on your laptop.</li>
 
                 <li><p>
@@ -211,77 +195,37 @@
                     </p>
                 </li>
 
-                <li>The Raspberry Pi must be connected to the WSU Guest wireless.<br />
-                    Do NOT connect to the Warrior or Wazoo wireless networks.
-                </li>
 
-                <li>On the Raspberry Pi you MUST open the Chromium browser and verify that you can  reach a website such as: <br />
-                    <code>www.winona.edu</code><br />
-                    If not, you will be redirected to a web authentication page, where you can create a WSU guest account, and logon.
-                </li>
+                <li>Open Windows PowerShell by clicking Start&gt; type &#39;PowerShell&#39;</li>
+                <li>At the PowerShell command line type: ssh pi@xxx.xxx.xxx.xxx replacing the xxx with the Raspberry Pi IP address retrieved above.<br />
+                    When prompted for the Raspberry Pi password enter  &#39;W1n0nA&#39;&nbsp; Refer to the figure above.<br />
 
-
-                <li>If PuTTY is not running, start it per the instructions in Excercise 1.<br />
-                    If using a Mac, go to this url: <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md"  class="bg-info text-white" target="_blank">https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md  </a>&nbsp;   then go to the next Exercise.
-                </li>
-
-                <li>
-                    <p>
-                        In the &#39;Host Name (or IP address)&#39; box at the top, enter the IP address of your Raspberry Pi that you saved from your previous assignment.<br />
-                        Note: if you cannot connect, the Raspberry Pi IP address may have changed. In that case you will need to connect a keyboard and mouse to the Raspberry Pi to obtain the new IP address.<br />
-                        Make sure that &#39;Port&#39; is set to &#39;22&#39; and<br />
-                        the &#39;Connection type:&#39; is &#39;SSH&#39;
-
-                        <a href="CreatePuttySession.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('CreatePuttySession.PNG', 'popup'); return false;">
-                            <img src="CreatePuttySession.PNG" width="300" alt="enter RPi IP address" class="img-responsive img-responsive" /></a>PuTTY Session-your IP address WILL be different<br />
-                    </p>
-                </li>
-
-                <li>In the &#39;Saved Sessions&#39; box type in a session name such as &#39;Raspberry Pi&#39;, then click the Save butotn.<br />
-                </li>
-                <li>
-                    <p>
-                        Click the Open button and a Secutiy Alert window will appear-click Yes.<br />
-                        <a href="SecurityAlert.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('Security Alert.PNG', 'popup'); return false;">
-                            <img src="SecurityAlert.PNG" width="300" alt="logon to RPi" class="img-responsive img-responsive" /></a>Security Alert<br />
-
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        In the PuTTY session window you will be prompted to login, enter<br />
-                        username: pi<br />
-                        password: <strong>MagicMirror%</strong><br />
-                        No feedback is provided as you type your password.  Press the Enter key, and you are logged in.<br />
-
-                        <a href="PuttySession.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('PuttySession.PNG', 'popup'); return false;">
-                            <img src="PuttySession.PNG" width="300" alt="logon to RPi" class="img-responsive img-responsive" /></a>Logged In to PuTTY Session<br />
-                    </p>
+					<a href="images/PowerShellLogin.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/PowerShellLogin.PNG', 'popup'); return false;">
+						<img src="images/PowerShellLogin.PNG" width="300" alt="PowerShell SSH login" class="img-responsive img-responsive" />
+					</a>
+					<br />
+					Figure 3-PowerShell Interface<br />
+					<br />
                 </li>
 
             </ol>
 
-            <hr />
 
+            <hr />
         </div>
 
 
+        <!--Exercise 3-->
 
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Working With SSH</a></div>
 
-
-
-        <!--Exercise 4-->
-
-        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Working With PuTTY</a></div>
-
-        <div id="Exercise04" class="collapse in  col-lg-12">
+        <div id="Exercise03" class="collapse in  col-lg-12">
 
             <ol>
                 
                 <li>These steps are done on your laptop. </li>
 
-                <li>There is no graphical user interface in PuTTY, you must type in all commands.<br />
+                <li>There is no graphical user interface in PowerShell/SSH, you must type in all commands.<br />
                     If you need help, simply type in &#39;help&#39; and press enter to see a list of available commands.<br />
                 </li>
 
@@ -290,20 +234,22 @@
                     <p>
                         Periodically, at least weekly, update your Raspberry and apply the latest program patches and security fixes by typing in the following commands, pressing Enter after each one:<br />
                         <code>sudo apt-get update</code><br />
-                        <code>sudo apt-get upgrade</code>  You will be prompted to continue, press &#39;y&#39;<br />
+                        <code>sudo apt-get upgrade</code> <br />
+                        You will be prompted to continue, press &#39;y&#39;<br />
                         During this process read and comprehend any messages.<br />
                         Depending on how much updating is being done, it may take a while.<br />
                         If something goes wrong, there will be an explanation of how to proceed.<br />
                         See a teaching assistant or professor for help.<br />
 
 
-                        <a href="UpdateUpgrade.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('UpdateUpgrade.PNG', 'popup'); return false;">
-                            <img src="UpdateUpgrade.PNG" width="300" alt="RPi update" class="img-responsive img-responsive" /></a>Update Raspberry Pi-your messages will be different<br />
+                        <a href="images/UpdateUpgrade.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/UpdateUpgrade.PNG', 'popup'); return false;">
+                            <img src="images/UpdateUpgrade.PNG" width="300" alt="RPi update" class="img-responsive img-responsive" /></a><br />
+                        Figure 4-Update Raspberry Pi-your messages will be different<br />
 
                     </p>
                 </li>
 
-                <li>In the PuTTY window install the Matrix program<br />
+                <li>In the PowerShell-SSH window install the Matrix program<br />
                     Enter the following text, then press the enter key:<br />
                     <code>sudo apt-get install cmatrix</code>
 
@@ -315,7 +261,7 @@
                 <li>After cmatrix is installed, type in, then press the enter key:<br />
                     <code>cmatrix</code><br />
                     You will see a matrix program running on the Raspberry Pi.<br />
-                    Press the q key to quit the program, and return to PuTTY.<br />
+                    Press the q key to quit the program, and return to PowerShell/SSH.<br />
                     Feel free to explore the available options.<br />
                     reference:  <a href="http://reefwingrobotics.blogspot.com/2017/01/raspberry-pi-console-matrix-screensaver.html" class="bg-info text-white" target="_blank">http://reefwingrobotics.blogspot.com/2017/01/raspberry-pi-console-matrix-screensaver.html </a>
                     <br />
@@ -330,15 +276,17 @@
                 <li>
                     <p>
                         Type <code>cmatrix -b -s</code> and press enter to see the program start with bold font characters, and ???<br />
-                        <a href="cmatrix.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('cmatrix.PNG', 'popup'); return false;">
-                            <img src="cmatrix.PNG" width="300" alt="cmatrix" class="img-responsive img-responsive" /></a>cmatrix running, press any key...<br />
+
+
+                        <a href="images/CmatrixScreenShot.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/CmatrixScreenShot.PNG', 'popup'); return false;">
+                            <img src="images/CmatrixScreenShot.PNG" width="300" alt="Cmatrix Screen Shot of PowerShell-SSH window" class="img-responsive img-responsive" /></a><br />
+                        Figure 5-cmatrix running, press &#39;q&#39; to stop...<br />
                     </p>
                 </li>
 
-                <li>Press any key to return to the PuTTY window.<br />
+                <li>Press the 'q' key to return to the PowerShell/SSH window.<br />
                     You are going to take a screen shot of this window for the next exercise.
                 </li>
-
 
 
             </ol>
@@ -350,25 +298,20 @@
 
 
 
+        <!--Exercise 4-->
 
+        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-ScreenShot</a></div>
 
+        <div id="Exercise04" class="collapse in  col-lg-12">
 
-
-
-
-
-
-        <!--Exercise 5-->
-
-        <div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-ScreenShot</a></div>
-
-        <div id="Exercise05" class="collapse in  col-lg-12">
-
-            <p>Use the Snipping Tool on your laptop to take a screenshot of the PuTTY window from the previous exercise.<br />   
+            <p>Use the Snipping Tool on your laptop to take a screenshot of the PowerShell-SSH window running cmatrix in the previous exercise.<br />   
                 
                 Your screen shot will look something like this: <br />
-                        <a href="SampleScreenShot.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('SampleScreenShot.PNG', 'popup'); return false;">
-                            <img src="SampleScreenShot.PNG" width="300" alt="Sample Screen Shot of PuTTY window" class="img-responsive img-responsive" /></a>PuTTY Window Sample Screen Shot<br /><br />
+
+                        <a href="images/CmatrixScreenShot.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/CmatrixScreenShot.PNG', 'popup'); return false;">
+                            <img src="images/CmatrixScreenShot.PNG" width="300" alt="Cmatrix Screen Shot of PowerShell-SSH window" class="img-responsive img-responsive" /></a>
+                <br />
+                Figure 6-SSH Window Sample Screen Shot<br /><br />
 
 
                 Save the screenshot  as &quot;IOTP03&quot; in your ' 
@@ -377,6 +320,16 @@
                     ' folder.<br />
 
           </p>
+            
+            <p>
+                    In PowerShell type logout to close the SSH connection to the Raspberry Pi.<br />
+                        <a href="images/PowerShellSSH_Logout.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/PowerShellSSH_Logout.PNG', 'popup'); return false;">
+                            <img src="images/PowerShellSSH_Logout.PNG" width="300" alt="cmatrix" class="img-responsive img-responsive" /></a>
+                <br />
+                Figure 7- Close RPi Connection<br />
+
+                </p>
+
             <hr />
         </div>
 
@@ -402,19 +355,46 @@
 
         <div class="col-lg-12 text-primary">
             <p>
-                (90) 1. Upload your screenshot to the &#39;IOTP03&#39; D2L Assignment Folder.
+                (70) 1. Upload your screenshot to the &#39;IOTP03&#39; D2L Assignment Folder.
             </p>
             <hr />
         </div>
 
 
 
+		<!--Exercise 5-->
+
+		<div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Reflection</a></div>
+
+		<div id="Exercise05" class="collapse in  col-lg-12">
+
+			<p>
+				Based on your experience in this exercise and what you just learned, develop a brief statement about the value of SSH as a remote access tool for organizations.<br />
+				Think about what type of problems these devices could solve, and would it be cost-effective?<br />
+				Consider businesses that deploy IoT 'solutions', on the order of thousands or millions of devices-how can support of these devices be automated?<br />
+                References:<br />
+                <a href="https://www.techtarget.com/searchsecurity/definition/Secure-Shell" target="_blank" class="bg-info text-white">TechTarget-Secure Shell</a><br />
+                <a href="https://www.keyfactor.com/blog/ssh-protocol" target="_blank" class="bg-info text-white">KeyFactor-The What, Why 
+
+				&amp; How of SSH Protocol</a></p>
+
+			<div class="col-lg-12 text-primary">
+				(20) 2. Reflections<br />
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q2" type="text" id="q2" value="value of SSH remote access:">
+				<hr />
+			</div>
+
+			<hr />
+
+			<hr />
+		</div>
 
 
 
 
         <div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
-
+		<div id="ExerciseSubmit" class="collapse in  col-lg-12">
 
         <div class="col-lg-12">
             <p>
@@ -424,11 +404,12 @@
         </div>
 
         <div class="col-lg-12 text-primary">
-            (10) 2. Assignment submission<br />
+            (10) 3. Assignment submission<br />
             <!-- Enter your answer in the VALUE field below   GROK -->
-            <input class="form-control" name="q2" type="text" id="q2" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOTP03.">
+            <input class="form-control" name="q3" type="text" id="q3" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOTP03.">
             <hr />
         </div>
+            </div>
 
 
         <hr />
@@ -436,7 +417,6 @@
             <h2>-- WHEN DONE --<br />
                 SHUTDOWN THE RASPBERRY PI<br />
                 TURN OFF THE POWER<br />
-                REMOVE YOUR FLASH DRIVE
             </h2>
         </div>
         <hr />
