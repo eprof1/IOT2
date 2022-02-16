@@ -24,7 +24,7 @@
 
         <input name="InstID" type="hidden" id="InstID" value="00617282">
 
-        <h1 class="text-center">Setting Up a micro:bit</h1>
+        <h1 class="text-center">Programming a micro:bit</h1>
 
 
         <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
@@ -87,7 +87,7 @@
 
             <p>
                 <a href="microbit-hardware-access.jpg" class="img-responsive img-rounded" target="popup" onclick="window.open('microbit-hardware-access.jpg', 'popup'); return false;">
-                    <img src="microbit-hardware-access.jpg" width="400" alt="micro:bit" class="img-responsive img-responsive" /></a>micro:bit Features
+                    <img src="images/microbit-hardware-access.jpg" width="400" alt="micro:bit" class="img-responsive img-responsive" /></a>micro:bit Features
             </p>
 
 
@@ -101,7 +101,7 @@
             <p>After completing this assignment you will be able to:</p>
             <ol>
                 <li>Obtain, modify or create a program</li>
-                <li>Connect the Raspberry Pi&nbsp; or a laptop to the micro:bit</li>
+                <li>Connect a computer to the micro:bit</li>
                 <li>Upload the program to the micro:bit</li>
                 <li>Test and debug the program</li>
                 <li>Upload a screen shot to D2L</li>
@@ -115,8 +115,8 @@
 
         <div id="Overview" class="collapse in  col-lg-12">
             This assignment reviews basic computer concepts that you will need in this course and throughout your career.<br />
-            For this assignment, you will install the Mu&nbsp; code editor onto your Raspberry Pi.<br />
-            Note there is also a Mu editor available for Windows.<br />
+            For this assignment, you will install the Mu&nbsp; code editor onto your laptop.<br />
+            Note there is also a Mu editor available for Windows and Macs.<br />
             You will learn to work with  Mu and upload programs to the micro:bit.<br />
             And you will modify and debug these programs.
             <p>
@@ -147,35 +147,19 @@
             </p>
             <ol>
 
-                <li>Make sure to connect the micro:bit to the Raspberry Pi using a USB A to micro USB cable.</li>
-                <li>Boot the Raspberry Pi, and ensure it has internet access.</li>
-                <li>You may notice that after the Raspberry Pi boots, a message appears on the micro:bit screen.<br />
-                    This is not a problem, the micro:bit is running a default program that was uploaded previously.
+                <li>The micro:bit is connected to the USB-C dock, your laptop connects to the micro:bit once you connect to the USB-C dock.</li>
+                <li>You may notice that with your laptop connected to the USB-C dock a message appears on the micro:bit screen.<br />
+                    This is not a problem, the micro:bit is running a program that was uploaded previously.
                 </li>
-                <li>On the Pi, open a Terminal window.<br />
-                    Type in <code>sudo apt-get update</code><br />
-                    and when that completes, type in <br />
-                    <code>sudo apt-get upgrade</code><br />
-                    to update the Raspberry Pi.
-                </li>
-                <li>Check to see if the Mu editor is already installed.<br />
-                    From the menu choose &#39;Programming&#39;, and look for &#39;mu&#39;<br />
-                    <p>
-                        <a href="MuEditor.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('MuEditor.PNG', 'popup'); return false;">
-                            <img src="MuEditor.PNG" width="300" alt="Mu Editor" class="img-responsive img-responsive" /></a>Mu Editor
-                    </p>
+                <li><a href="https://codewith.mu/en/download" class="bg-info text-white" target="_blank">Visit this url</a> to download and install Mu to your laptop.
                 </li>
 
-                <li>If the Mu editor is not installed, then in the terminal window type the following:<br />
-                    <code>sudo apt-get install mu-editor</code>
-                    <br />
-                </li>
 
-                <li>On the Pi, start mu.<br />
+                <li>On your laptop, start mu.<br />
                     If a &#39;Select Mode&#39; window appears, choose &#39;BBC micro:bit&#39;, then press OK.<br />
                     <p>
                         <a href="StartMu.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('StartMu.PNG', 'popup'); return false;">
-                            <img src="StartMu.PNG" width="300" alt="Mu Mode" class="img-responsive img-responsive" /></a>Choose Mu Mode
+                            <img src="images/StartMu.PNG" width="300" alt="Mu Mode" class="img-responsive img-responsive" /></a>Choose Mu Mode
                     </p>
                 </li>
 
@@ -183,7 +167,7 @@
                 <li>This is what the mu editor looks like in micro:bit Mode, with a simple program.<br />
                     <p>
                         <a href="MuSet.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('MuSet.PNG', 'popup'); return false;">
-                            <img src="MuSet.PNG" width="300" alt="Mu Editor" class="img-responsive img-responsive" /></a>Mu Code Editor
+                            <img src="images/MuSet.PNG" width="300" alt="Mu Editor" class="img-responsive img-responsive" /></a>Mu Code Editor
                     </p>
                 </li>
 
@@ -264,7 +248,7 @@ display.scroll("WELCOME TO MIS!")
                 Another hint: make use of the function syntax.<br />
                 <p>
                     <a href="SyntaxChecker.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('SyntaxChecker.PNG', 'popup'); return false;">
-                        <img src="SyntaxChecker.PNG" width="300" alt="Syntax Checker" class="img-responsive img-responsive" /></a>Syntax Checker
+                        <img src="images/SyntaxChecker.PNG" width="300" alt="Syntax Checker" class="img-responsive img-responsive" /></a>Syntax Checker
                 </p>
             </p>
 
@@ -316,108 +300,130 @@ display.clear()
 
 
 
-        <!--Exercise 4-->
+		<!--Exercise 4-->
 
-        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Screen Shots</a></div>
+		<div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Document Work</a></div>
 
-        <div id="Exercise04" class="collapse in  col-lg-12">
+		<div id="Exercise04" class="collapse in  col-lg-12">
 
-            <ol>
-                <li>On the Raspberry Pi make sure the mu editor showing IOTB01X and your name on the desktop are visible.</li>
+			<ol>
 
-                <li>In the terminal window type in 
-                    <code>scrot -s</code>
-                    then click and drag the mouse to select an area from the top left showing the VNC icon and title bar, also include your name on the desktop and the mu editor.
-                </li>
-                <li>Open File Manager, navigate to the /home/pi directory and rename the screen shot IOTB01.png</li>
-                <li>
-                    <p>
-                        Your screen shot will look something like this:<br />
-                        <a href="PythonCode.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('PythonCode.PNG', 'popup'); return false;">
-                            <img src="PythonCode.PNG" width="300" alt="sample screen shot" class="img-responsive img-responsive" /></a>Sample Screen Shot<br />
-                    </p>
-                </li>
-            </ol>
-            <hr />
-        </div>
+				<li>Use the Snipping Tool to make a screen shot of the micro:bit IDE.<br />
+					Make sure your name, class, assignment and date is visible in your Sketch comments.
+				</li>
+				<li>Open File Manager, navigate to the /home/pi directory and rename the screen shot <strong>IOTB01.png</strong></li>
+				<li>
+					<p>
+						Your screen shot will look something like this:<br />
+						<a href="images/ScreenShot.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/ScreenShot.PNG', 'popup'); return false;">
+							<img src="images/PythonCode.PNG" width="300" alt="screen shot format" class="img-responsive img-responsive" /></a>Screen Shot Format<br />
+					</p>
+				</li>
+			</ol>
+			<hr />
+		</div>
 
 
 
 
 
 
-        <div class="col-lg-12"><a href="#UploadScreenShot" class="btn btn-info" data-toggle="collapse">Upload Screenshot</a></div>
+		<div class="col-lg-12"><a href="#UploadScreenShot" class="btn btn-info" data-toggle="collapse">Upload Screenshot</a></div>
 
-        <div id="UploadScreenShot" class="collapse in  col-lg-12">
-            <p>
-                For this final Exercise, and to complete this assignment please read all of these instructions.<br />
-                You are submitting a screen shot of your work to the appropriate D2L Assignment folder.<br />
-            </p>
-            <br />
-        </div>
+		<div id="UploadScreenShot" class="collapse in  col-lg-12">
+			<p>
+				Upload a screen shot of your work to the appropriate D2L Assignment folder.<br />
+			</p>
+		</div>
 
-        <div class="col-lg-12 text-primary">
-            <p>
-                (90) 1. On the Raspberry Pi, use the Chromium browser to <a href="https://winona.learn.minnstate.edu/" class="bg-info text-white" target="_blank">login to D2L</a>.<br />
-                Upload your screenshot to the &#39;IOTB01&#39; D2L Assignment Folder.
-            </p>
+		<div class="col-lg-12 text-primary">
+			<p>
+				(70) 1. Use a web browser to <a href="https://winona.learn.minnstate.edu/" class="bg-info text-white" target="_blank">login to D2L</a>.<br />
+				Upload your screenshot to the &#39;IOTB01&#39; D2L Assignment Folder.
 
-            <div class="col-lg-12 text-danger">
-                <h2>Screen Shot IOTB01</h2>
-                <hr />
-            </div>
-        </div>
+				<!--  PgP 2/4/2018 create path using constants and current document assignment -->
+				Save the screen shot  as &quot;IOTB01&quot; in your ' 
+                <code><span id="aPath"></span></code>
+				<script>document.getElementById("aPath").innerHTML = Path </script>
+				' folder.<br />
+
+			</p>
+
+			<div class="col-lg-12 text-danger">
+				<h2>Screen Shot IOTB01</h2>
+				<hr />
+			</div>
+		</div>
+
+		<!--Exercise 5-->
+
+		<div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-Reflection</a></div>
+
+		<div id="Exercise05" class="collapse in  col-lg-12">
+
+			<p>
+				Based on your experience in this exercise and what you just learned, develop a brief statement about the value of microcontrollers as an automation tool for simple tasks in organizations.<br />
+				Think about what type of problems these devices could solve, and would it be cost-effective?<br />
+				Consider businesses that deploy IoT 'solutions', on the order of thousands or millions of devices-how can support of these devices be automated?
+			</p>
+
+			<div class="col-lg-12 text-primary">
+				(20) 2. Reflections<br />
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q2" type="text" id="q2" value="value of microcontrollers:">
+				<hr />
+			</div>
+
+			<hr />
+
+			<hr />
+		</div>
 
 
 
-        <div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+		<div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+
+		<div id="ExerciseSubmit" class="collapse in  col-lg-12">
 
 
-        <div class="col-lg-12">
-            <p>
-                When all tasks are completed press the Submit button.
-            </p>
-            <hr />
-        </div>
+			<div class="col-lg-12">
+				<p>
+					When all tasks are completed press the Submit button.
+				</p>
+				<hr />
+			</div>
 
-        <div class="col-lg-12 text-primary">
-            (10) 2. Assignment submission<br />
-            <!-- Enter your answer in the VALUE field below   GROK -->
-            <input class="form-control" name="q2" type="text" id="q2" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOTB01.">
-            <hr />
-        </div>
-
-
-        <hr />
-        <div class="col-lg-12 text-danger text-center">
-            <h2>-- WHEN DONE --<br />
-                SHUTDOWN THE RASPBERRY PI<br />
-                TURN OFF THE POWER<br />
-                REMOVE YOUR FLASH DRIVE
-            </h2>
-        </div>
-        <hr />
+			<div class="col-lg-12 text-primary">
+				(10) 3. Assignment submission<br />
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q3" type="text" id="q3" readonly="readonly" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOTA01.">
+				<hr />
+			</div>
+		</div>
 
 
-        <div class=" col-lg-12">
-            <br />
-            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
-            <br />
-        </div>
+		<hr />
+		<hr />
 
-    </form>
 
-    <!-- Creative Commons License Info -->
-    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+		<div class=" col-lg-12">
+			<br />
+			<input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
+			<br />
+		</div>
 
-    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+	</form>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../ReadOnly/jquery-1.js"></script>
+	<!-- Creative Commons License Info -->
+	<div id="xLicense" class=" col-lg-12 text-muted"></div>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../ReadOnly/bootstrap.js"></script>
+	<div id="xfooter" class=" col-lg-12 text-muted"></div>
 
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../../ReadOnly/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../ReadOnly/bootstrap.js"></script>
 
 </body>
 </html>
