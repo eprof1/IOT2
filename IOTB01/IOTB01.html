@@ -86,7 +86,9 @@
         <div id="Objectives" class=" collapse in col-lg-12">
 
             <p>
-                <a href="microbit-hardware-access.jpg" class="img-responsive img-rounded" target="popup" onclick="window.open('microbit-hardware-access.jpg', 'popup'); return false;">
+					<img src="images/MicrobitLogo.png"  alt="micro:bit" class="img-responsive img-responsive" /><br /><br />
+
+                <a href="images/microbit-hardware-access.jpg" class="img-responsive img-rounded" target="popup" onclick="window.open('images/microbit-hardware-access.jpg', 'popup'); return false;">
                     <img src="images/microbit-hardware-access.jpg" width="400" alt="micro:bit" class="img-responsive img-responsive" /></a>micro:bit Features
             </p>
 
@@ -142,7 +144,7 @@
 
             <p>
                 The programs that run on an micro:bit can be created on many devices-a laptop or Raspberry Pi.<br />
-                In this exercise you will install the Mu code editor onto a Raspberry Pi.<br />
+                In this exercise you will install the Mu code editor onto a computer.<br />
                 Mu is an editor used to program in microPython.
             </p>
             <ol>
@@ -158,7 +160,7 @@
                 <li>On your laptop, start mu.<br />
                     If a &#39;Select Mode&#39; window appears, choose &#39;BBC micro:bit&#39;, then press OK.<br />
                     <p>
-                        <a href="StartMu.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('StartMu.PNG', 'popup'); return false;">
+                        <a href="images/StartMu.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/StartMu.PNG', 'popup'); return false;">
                             <img src="images/StartMu.PNG" width="300" alt="Mu Mode" class="img-responsive img-responsive" /></a>Choose Mu Mode
                     </p>
                 </li>
@@ -166,7 +168,7 @@
 
                 <li>This is what the mu editor looks like in micro:bit Mode, with a simple program.<br />
                     <p>
-                        <a href="MuSet.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('MuSet.PNG', 'popup'); return false;">
+                        <a href="images/MuSet.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/MuSet.PNG', 'popup'); return false;">
                             <img src="images/MuSet.PNG" width="300" alt="Mu Editor" class="img-responsive img-responsive" /></a>Mu Code Editor
                     </p>
                 </li>
@@ -177,7 +179,7 @@
 
             <p>
                 Before proceeding, make sure that you have already uploaded / published this assignment to your course website.<br />
-                Then you will be able to view the remaining instructions and copy code from the assignment while viewing it in the Raspberry Pi, using the Chromium browser.
+                Then you will be able to view the remaining instructions and copy code from the assignment while viewing it in a web browser.
             </p>
 
             <hr />
@@ -197,7 +199,7 @@
 
             <ol>
 
-                <li>On the Pi, open the Chromium browser to the following url:<br />
+                <li>On your computer, browse to the following url:<br />
                     <a href="https://microbit-micropython.readthedocs.io/en/latest/tutorials/hello.html" class="bg-info text-white" target="_blank">Scroll Message: https://microbit-micropython.readthedocs.io/en/latest/tutorials/hello.html</a>
                     <br />
                     This page explains how to create a program that scrolls a message across the micro:bit.<br />
@@ -221,10 +223,10 @@ display.scroll("WELCOME TO MIS!")
                 </li>
 
                 <li>Save the program as <strong>IOTB01.py</strong> in the default location,                   
-                    &#39;/home/pi/mu_code&#39;
+                    <strong>&#39;C:\Users\&lt;StarID&gt;\mu_code&#39;</strong>
                 </li>
 
-                <li>You can press the &#39;Reset&#39; button to make a program run again.
+                <li>On the micro:bit press the &#39;Reset&#39; button to make a program run again.
                 </li>
 
             </ol>
@@ -247,14 +249,14 @@ display.scroll("WELCOME TO MIS!")
             <p>
                 Another hint: make use of the function syntax.<br />
                 <p>
-                    <a href="SyntaxChecker.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('SyntaxChecker.PNG', 'popup'); return false;">
+                    <a href="images/SyntaxChecker.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/SyntaxChecker.PNG', 'popup'); return false;">
                         <img src="images/SyntaxChecker.PNG" width="300" alt="Syntax Checker" class="img-responsive img-responsive" /></a>Syntax Checker
                 </p>
             </p>
 
             <p>
                 And another hint: if you try to flash a program that does not work, an error message will scroll on the micro:bit.<br />
-                This message may be lengthy, so hard to read.
+                This message may be lengthy, and possibly hard to read.
             </p>
 
             <hr />
@@ -262,7 +264,15 @@ display.scroll("WELCOME TO MIS!")
             <ol>
                 <li>Copy the code below, and paste it into the mu editor:<br />
 
-                    <pre>from microbit import *
+                    <pre>
+# Your Name Here
+# Your Class Here
+# Today's Date Here
+# IOTB01
+
+from microbit import *
+
+display.scroll("WELCOME TO MIS!")
 
 while True:
     if button_a.is_prssed():
@@ -288,7 +298,7 @@ display.clear()
                 </li>
 
                 <li>Modify the program as required so that is works.<br />
-
+                    <strong>There are errors in the code!</strong>
                 </li>
 
                 <li>When you think the program is ready, flash the micro:bit and try it out.<br />
@@ -309,13 +319,21 @@ display.clear()
 			<ol>
 
 				<li>Use the Snipping Tool to make a screen shot of the micro:bit IDE.<br />
-					Make sure your name, class, assignment and date is visible in your Sketch comments.
+					Make sure your name, class, assignment and date is visible in your program comments.
 				</li>
-				<li>Open File Manager, navigate to the /home/pi directory and rename the screen shot <strong>IOTB01.png</strong></li>
+				<li>
+
+				<!--  PgP 2/4/2018 create path using constants and current document assignment -->
+				Save the screen shot  as &quot;IOTB01&quot; in your ' 
+                <code><span id="abPath"></span></code>
+				<script>document.getElementById("abPath").innerHTML = Path </script>
+				' folder.<br />
+
+				</li>
 				<li>
 					<p>
 						Your screen shot will look something like this:<br />
-						<a href="images/ScreenShot.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/ScreenShot.PNG', 'popup'); return false;">
+						<a href="images/PythonCode.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/PythonCode.PNG', 'popup'); return false;">
 							<img src="images/PythonCode.PNG" width="300" alt="screen shot format" class="img-responsive img-responsive" /></a>Screen Shot Format<br />
 					</p>
 				</li>
@@ -362,9 +380,14 @@ display.clear()
 		<div id="Exercise05" class="collapse in  col-lg-12">
 
 			<p>
-				Based on your experience in this exercise and what you just learned, develop a brief statement about the value of microcontrollers as an automation tool for simple tasks in organizations.<br />
-				Think about what type of problems these devices could solve, and would it be cost-effective?<br />
-				Consider businesses that deploy IoT 'solutions', on the order of thousands or millions of devices-how can support of these devices be automated?
+				Browse to the <a href="https://codewith.mu/en/tutorials/" class="bg-info text-white" target="_blank">micro:bit Tutorials page</a>.<br />
+                Examine the available tutorials.<br />
+                Choose a tutorial of interest to you and read it.
+			</p>
+			<p>
+				Based on your experience in this exercise and the tutorial you reviewed, develop a brief statement about the value of microcontrollers as an automation tool for simple tasks in organizations.<br />
+				Think about what type of problems these devices could solve, and would it be effective?<br />
+				Consider the learning curve to program these devices.
 			</p>
 
 			<div class="col-lg-12 text-primary">
@@ -396,7 +419,7 @@ display.clear()
 			<div class="col-lg-12 text-primary">
 				(10) 3. Assignment submission<br />
 				<!-- Enter your answer in the VALUE field below   GROK -->
-				<input class="form-control" name="q3" type="text" id="q3" readonly="readonly" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOTA01.">
+				<input class="form-control" name="q3" type="text" id="q3" readonly="readonly" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOTB01.">
 				<hr />
 			</div>
 		</div>
