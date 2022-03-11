@@ -97,8 +97,7 @@
             </p>
             <p>After completing this assignment you will be able to:</p>
             <ol>
-                <li>Obtain MySQL</li>
-                <li>Install MySQL on a Raspberry Pi</li>
+                <li>Investigate MySQL</li>
                 <li>Run MySQL</li>
                 <li>Issue SQL commands from the Raspberry Pi CLI-Command Line Interface</li>
             </ol>
@@ -123,16 +122,17 @@
 
         <!--Exercise 1-->
 
-        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Install MySQL</a><a href="#Exercise01"></a></div>
+        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Prepare for MySQL</a><a href="#Exercise01"></a></div>
 
         <div id="Exercise01" class="collapse in  col-lg-12">
 
             <ol>
-                <li>These steps are performed on the Raspberry Pi.</li>
+
+                <li>These first steps regarding installation have already been performed on the Raspberry Pi image and are for reference purposes.</li>
 
                 <li>Open a Terminal window and enter the following commands to ensure your Raspberry Pi is up to date<br />
-                    <code>sudo apt-get update</code><br />
-                    <code>sudo apt-get full-upgrade</code>
+                    <code>sudo apt update</code><br />
+                    <code>sudo apt full-upgrade</code>
                 </li>
 
                 <li>In the Terminal window enter the following commands to install MySQL:<br />
@@ -140,35 +140,35 @@
                     It will take a few minutes for the installation to complete.
                 </li>
 
-                <li>In the Terminal window, to verify MySQL is installed and works, enter:<br />
+                <li>In the Terminal window, to <b>verify MySQL is installed and works</b>, enter:<br />
                     <code>sudo /etc/init.d/mysql status</code>
                     <p>
-                        <a href="MySQLRunning.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('MySQLRunning.PNG', 'popup'); return false;">
-                            <img src="MySQLRunning.PNG" width="300" alt="RPi Monitor" class="img-responsive img-responsive" /></a>MySQL Running Successfully<br />
+                        <a href="images/MySQLRunning.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/MySQLRunning.PNG', 'popup'); return false;">
+                            <img src="images/MySQLRunning.PNG" width="300" alt="mySQL running" class="img-responsive img-responsive" /></a>MySQL Running Successfully<br />
                     </p>
                 </li>
 
-                <li>In the Terminal window enter the following commands to log into the MySQL instance, noting that the default password is blank:<br />
+                <li>In the Terminal window enter the following commands <b>to log into the MySQL instance, noting that the default password is blank</b>:<br />
                     <code>sudo mysql -u root -p -h localhost</code><br />
                     Press Enter when prompted for the password.<br />
                     Type &#39;status&#39; to see the MySQL settings.<br />
                     <p>
-                        <a href="MySQL.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('MySQL.PNG', 'popup'); return false;">
-                            <img src="MySQL.PNG" width="300" alt="RPi Monitor" class="img-responsive img-responsive" /></a>MySQL Status<br />
+                        <a href="images/MySQL.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/MySQL.PNG', 'popup'); return false;">
+                            <img src="images/MySQL.PNG" width="300" alt="MySQL status" class="img-responsive img-responsive" /></a>MySQL Status<br />
                     </p>
                 </li>
 
                 <li>Install the world sample database by opening the Chromium browser on your RPi and typing the following into the address bar:<br />
                     <code>https://dev.mysql.com/doc/index-other.html</code><br />
-                    <a href="WorldDB_Gzip.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('WorldDB_Gzip.PNG', 'popup'); return false;">
-                        <img src="WorldDB_Gzip.PNG" width="300" alt="One Drive" class="img-responsive img-responsive" /></a> Download World Database<br />
+                    <a href="images/WorldDB_Gzip.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/WorldDB_Gzip.PNG', 'popup'); return false;">
+                        <img src="images/WorldDB_Gzip.PNG" width="300" alt="download world database" class="img-responsive img-responsive" /></a> Download World Database<br />
                     <br />
                     Then click &#39;Gzip&#39;, which will download the world database to the&nbsp; &#39;/home/pi/Downloads&#39; folder.
                 </li>
 
                 <li>Open the folder containing the downloaded file and double click it to extract it as &#39;world.sql&#39; in the &#39;/home/pi/Downloads&#39; folder.<br />
-                    <a href="ExtractWorld.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('ExtractWorld.PNG', 'popup'); return false;">
-                        <img src="ExtractWorld.PNG" width="300" alt="One Drive" class="img-responsive img-responsive" /></a> Extract World Database<br />
+                    <a href="images/ExtractWorld.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/ExtractWorld.PNG', 'popup'); return false;">
+                        <img src="images/ExtractWorld.PNG" width="300" alt="extract world database" class="img-responsive img-responsive" /></a> Extract World Database<br />
                 </li>
 
 
@@ -197,10 +197,10 @@
                         <br />
                         3 rows in set (0.001 sec)<br />
 
-                    </code>
+                    </code><br />
                 </li>
 
-                <li>Experiment with commands you learned in Project 3:<br />
+                <li><b>Experiment with SQL commands</b>:<br />
                     <code>SELECT COUNT(*) FROM city;<br />
                         <br />
                         SELECT * FROM country;
@@ -213,7 +213,7 @@
                     <code>SHOW COLUMNS FROM city;</code><br />
                     <br />
                     <code>INSERT INTO city (ID,Name,CountryCode,District,Population) VALUES('4080','Chicago','USA','IL','8000000');
-                    </code>
+                    </code><br /><br />
                 </li>
 
                 <li>Congratulatons! Your IoT device is running a database server.<br />
@@ -235,15 +235,16 @@
             <ol>
                 <li>These steps are performed on your Raspberry Pi.</li>
 
-                <li>If not running, open the MySQL database, use the World database and insert a record for Winona, MN into the city table.
+                <li>If not running, open the MySQL database, use the World database and <b>insert a record for Winona, MN into the city table</b>.
                 </li>
 
                 <li>Once you have inserted the new record, run the following SQL statement:<br />
                     <code>SELECT Name FROM city WHERE Name like 'Wi%';</code><br />
                     Your output will look something like this:<br />
                     <p>
-                        <a href="SqlOutput.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('SqlOutput.PNG', 'popup'); return false;">
-                            <img src="SqlOutput.PNG" width="300" alt="SQL Output" class="img-responsive img-responsive" /></a>Cities Starting With 'Wi'<br />
+                        <a href="images/SqlOutput.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/SqlOutput.PNG', 'popup'); return false;">
+                            <img src="images/SqlOutput.PNG" width="300" alt="SQL Output" class="img-responsive img-responsive" /></a>
+                        Cities Starting With 'Wi'<br />
                     </p>
                 </li>
 
@@ -271,7 +272,7 @@
                     Note: this can be done using the Snipping Tool if you are running VNC, or use the <code>scrot</code> command if you are connected to the Raspberry Pi with a keyboard and mouse.
                 </li>
 
-                <li>On your laptop you may want to save the screenshot  as &quot;IOT07&quot; in your ' 
+                <li>On your laptop save the screenshot  as &quot;IOT07&quot; in your ' 
              <code><span id="abPath"></span></code>
                     <script>document.getElementById("abPath").innerHTML = Path; </script>
                     ' folder.<br />
@@ -299,7 +300,7 @@
 
         <div class="col-lg-12 text-primary">
             <p>
-                (90) 1. Upload your screenshot to the &#39;IOT07&#39; D2L Assignment Folder.
+                (50) 1. Upload your screenshot to the &#39;IOT07&#39; D2L Assignment Folder.
             </p>
             <hr />
         </div>
@@ -307,69 +308,116 @@
 
 
 
-        <div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+		<!--Exercise 4-->
 
+		<div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Reflections</a></div>
 
-        <div class="col-lg-12">
-            <p>
-                When all tasks are completed press the Submit button.
-            </p>
-            <hr />
-        </div>
+		<div id="Exercise04" class="collapse in  col-lg-12">
 
-        <div class="col-lg-12 text-primary">
-            (10) 2. Assignment submission<br />
-            <!-- Enter your answer in the VALUE field below   GROK -->
-            <input class="form-control" name="q2" type="text" id="q2" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT07.">
-            <hr />
-        </div>
+			<p>
+				Based on your experience in this exercise, consider the value of mySQL databases for organizations, especially those needing to curate information.<br />
+				Think about what type of problems a Raspberry Pi equipped with a relational database could solve, and whether it could be cost-effective.<br />
+				Businesses are deploying IoT 'solutions'-how can mySQL equipped Raspberry Pis support or automate these efforts?<br />
+				<br />
+				References:<br />
+				MySQL on Pi: <a href="https://pimylifeup.com/raspberry-pi-mysql/">&nbsp;Pi MyLifeUp website</a><br />
 
+				W3 Schools:&nbsp; <a class="bg-info text-white" href="https://www.w3schools.com/mySQl/default.asp" target="_blank">MySQL Tutorial </a>
 
-
-        <hr />
-
-
-        <hr />
-
-        <div class="col-lg-12">
-            <p>
-                Congratulations! You have successfully installed and used RPi-Monitor, a monitoring program on a Raspberry Pi single board computer.                
-            </p>
-            <hr />
-        </div>
+			</p>
+			<div class="col-lg-12 text-primary">
+				(20) 2. Reflections-value<br />
+				List a specific problem that a low-cost, mySQL relational database could solve.<br />
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q2" type="text" id="q2" value="specific problem:">
+				<hr />
+			</div>
 
 
 
+			<div class="col-lg-12 text-primary">
+				(20) 3. Reflections-content<br />
+				Research the internet on the topic of relational databases.<br />	
+                How could an organization&#39;s data adminstrator use mySQL to their organization&#39;s benefit?<br />
+                Hint:  <a href="https://www.123-reg.co.uk/support/servers/what-is-mysql-and-why-do-i-need-it" class="bg-info text-white" target="_blank"  >What is mySQL
+                
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				</a>
+				<input class="form-control" name="q3" type="text" id="q3" value="use of mySQL:">
+				<hr />
+			</div>
 
-        <div class="col-lg-12 text-danger text-center">
-            <h2>-- WHEN DONE --<br />
-                SHUTDOWN THE RASPBERRY PI<br />
-                TURN OFF THE POWER<br />
-                REMOVE YOUR FLASH DRIVE
-            </h2>
-        </div>
-        <hr />
+
+		</div>
 
 
-        <div class=" col-lg-12">
-            <br />
-            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
-            <br />
-        </div>
 
-    </form>
 
-    <!-- Creative Commons License Info -->
-    <div id="xLicense" class=" col-lg-12 text-muted"></div>
 
-    <div id="xfooter" class=" col-lg-12 text-muted"></div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../ReadOnly/jquery-1.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../ReadOnly/bootstrap.js"></script>
+
+		<div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+
+
+		<div class="col-lg-12">
+			<p>
+				When all tasks are completed press the Submit button.
+			</p>
+			<hr />
+		</div>
+
+		<div class="col-lg-12 text-primary">
+			(10) 4. Assignment submission<br />
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input class="form-control" name="q4" type="text" id="q4" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT07.">
+			<hr />
+		</div>
+
+
+
+
+
+		<div class="col-lg-12">
+			<p>
+				Congratulations! You have used MySQL/mariadB, a relational database application, on a Raspberry Pi single board computer.                
+			</p>
+			<hr />
+		</div>
+
+
+
+
+		<div class="col-lg-12 text-danger text-center">
+			<h2>-- WHEN DONE --<br />
+				SHUTDOWN THE RASPBERRY PI<br />
+				TURN OFF THE POWER<br />
+			</h2>
+		</div>
+		<hr />
+
+
+		<div class=" col-lg-12">
+			<br />
+			<input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
+			<br />
+		</div>
+
+	</form>
+
+	<!-- Creative Commons License Info -->
+	<div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+	<div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../../ReadOnly/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../ReadOnly/bootstrap.js"></script>
 
 
 </body>
 </html>
+
+
