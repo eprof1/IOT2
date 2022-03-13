@@ -91,7 +91,7 @@
 				This software provides an easy way to create an information kiosk on a Raspberry Pi.<br />
 				<br />
 
-				More information on <a href="https://magicmirror.builders/" class="bg-info text-white" target="_blank" >Magic Mirror</a> is available online.<br />
+				More information on <a href="https://magicmirror.builders/" class="bg-info text-white" target="_blank">Magic Mirror</a> is available online.<br />
 
 			</p>
 			<p>After completing this assignment you will be able to:</p>
@@ -136,7 +136,7 @@
 					</p>
 				</li>
 
-				<li>The following installation instructions are based on the information from the <a href="https://docs.magicmirror.builders/getting-started/installation.html" class="bg-info text-white" target="_blank" >MagicMirror website</a>.
+				<li>The following installation instructions are based on the information from the <a href="https://docs.magicmirror.builders/getting-started/installation.html" class="bg-info text-white" target="_blank">MagicMirror website</a>.
 				</li>
 
 				<li>Install Node.js<br />
@@ -148,13 +148,11 @@
 					<code>sudo apt install -y nodejs</code>
 				</li>
 
-				<li>
-					clone the MagicMirror repository:<br />
+				<li>clone the MagicMirror repository:<br />
 					<code>git clone https://github.com/MichMich/MagicMirror </code>
 				</li>
 
-				<li>
-					move to the MagicMirror directory:<br />
+				<li>move to the MagicMirror directory:<br />
 					<code>cd MagicMirror/</code>
 				</li>
 
@@ -162,9 +160,10 @@
 					<code>npm install </code>
 				</li>
 
-				<li>
-					Note-read the output, you may need to run: <br />
-					<code>npm audit fix</code> <br />
+				<li>Note-read the output, you may need to run:
+					<br />
+					<code>npm audit fix</code>
+					<br />
 					or other commands to get the Magic Mirror to run.
 				</li>
 
@@ -189,8 +188,7 @@
 				<li>If the webpage does not appear, troubleshoot and resolve any issues.<br />
 				</li>
 
-				<li>
-					The default installation looks as below, with inappropriate alerts which can be changed:<br />
+				<li>The default installation looks as below, with inappropriate alerts which can be changed:<br />
 					<p>
 						<a href="images/MagicMirrorLandscape.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/MagicMirrorLandscape.PNG', 'popup'); return false;">
 							<img src="images/MagicMirrorLandscape.PNG" width="300" alt="magic mirror" class="img-responsive img-responsive" /></a> Magic Mirror, default installation<br />
@@ -221,7 +219,8 @@
 				<li>Open a Terminal window.	</li>
 
 				<li>Enter the following code:<br />
-					<code>cd ~</code> <br />
+					<code>cd ~</code>
+					<br />
 					<code>cd MagicMirror/config</code><br />
 
 				</li>
@@ -238,6 +237,15 @@
 				</li>
 
 				<li>Be very careful editing this file, incorrect punctuation will prevent the MagicMirror from working.<br />
+					<b>Add 4 compliments, one must contain your name.</b><br />
+					Note that each indentation is 4 spaces.<br />
+					Do NOT use the Tab key.<br />
+
+					<p>
+						<a href="images/sampleCompliments.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/sampleCompliments.PNG', 'popup'); return false;">
+							<img src="images/sampleCompliments.PNG" width="400" alt="compliments" class="img-responsive img-responsive" /></a>config file, Compliments section<br />
+					</p>
+
 					When done editing, open a Terminal window to the directory:<br />
 					<code>MagicMirror</code><br />
 					and enter:<br />
@@ -245,10 +253,6 @@
 					This will restart the MagicMirror with the update compliments.<br />
 					Note-if you made an error you will need to review and correct the changes to the config.js file above.
 
-					<p>
-						<a href="images/sampleCompliments.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/sampleCompliments.PNG', 'popup'); return false;">
-							<img src="images/sampleCompliments.PNG" width="400" alt="compliments" class="img-responsive img-responsive" /></a>config file, Compliments section<br />
-					</p>
 				</li>
 
 			</ol>
@@ -265,31 +269,14 @@
 
 		<div id="Exercise03" class="collapse in  col-lg-12">
 
-			<p> Running a Node-RED flow	</p>
-
 
 			<ol>
-				<li>These steps are performed on your computer.</li> 
+				<li>These steps are performed on your computer if you are using VNC, otherwise do them on the Raspberry Pi.</li>
 
-				<li>Point a browser to  <code>10.19.38.x:1880</code><br /> </li>
+				<li>Display the MagicMirror with your compliments. </li>
 
-				<li>Make sure the &#39;LCD-RGB screen&#39; tab is displayed.<br /> </li>
+				<li>Make a screen shot of your MagicMirror displaying the compliment containing your name. </li>
 
-				<li>Make sure to &#39;Deploy&#39; the Node-RED flow, if required.<br /> </li>
-
-				<li>Make sure to display the &#39;Debug&#39; window. </li>
-
-				<li>Click the button on the left edge of the &#39;Clear Screen&#39; Inject node.</li>
-
-				<li>Click the button on the left edge of the &#39;Send Message&#39; Debug node.</li>
-
-				<li>Take a screenshot similar to the one below, showing Node-RED and the messages in the Debug console.
-					<p>
-						<a href="../IOT09/images/noderedflow.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/noderedflow.PNG', 'popup'); return false;">
-							<img src="../IOT09/images/noderedflow.PNG" width="300" alt="Node-RED flow" class="img-responsive img-responsive" /></a>Node-RED flow<br />
-					</p>
-
-				</li>
 
 				<li>On your laptop save the screenshot  as &quot;IOT08&quot; in your ' 
              <code><span id="abPath"></span></code>
@@ -334,16 +321,15 @@
 		<div id="Exercise04" class="collapse in  col-lg-12">
 
 			<p>
-				Based on your experience in this exercise, consider the value of the Node-RED for organizations, especially departments involved in prototyping IoT products and services.<br />
-				Think about what type of problems a Raspberry Pi equipped with Node-RED, sensors and actuators could solve, and whether it could be cost-effective.<br />
-				Businesses are deploying IoT 'solutions'-how can a Node-RED equipped Raspberry Pis support or automate these efforts?<br />
+				Based on your experience in this exercise, consider the value of the MagicMirrors for organizations, especially departments involved in prototyping IoT products and services such as information kiosks.<br />
+				Think about what type of problems a Raspberry Pi equipped with the MagicMirror, sensors and actuators could solve, and whether it could be cost-effective.<br />
 				<br />
 				References:<br />
-				Magic Mirror: <a href="https://magicmirror.builders/">Website</a><br />
+				MagicMirror: <a href="https://magicmirror.builders/">Website</a><br />
 
-				Opto 22 Node-RED:&nbsp; <a href="https://www.youtube.com/watch?v=3AR432bguOY&amp;t=5s">Fundamentals</a><br />
+				MagicMirror Modules:  <a href="https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules">3rd Party Modules</a><br />
+				MagicMirror Modules:    <a href="https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules#utility--iot--3rd-party--integration">IoT modules</a>
 
-				Home Automation <a href="https://www.youtube.com/watch?v=hBEb_FCLRU8&amp;t=3s">Home Assistant</a><br />
 
 			</p>
 			<p>
@@ -352,7 +338,7 @@
 
 			<div class="col-lg-12 text-primary">
 				(20) 2. Reflections-value<br />
-				List a specific problem that Node-RED could solve.<br />
+				List a specific problem that a MagicMirror could solve.<br />
 				<!-- Enter your answer in the VALUE field below   GROK -->
 				<input class="form-control" name="q2" type="text" id="q2" value="specific problem:">
 				<hr />
@@ -363,9 +349,9 @@
 
 			<div class="col-lg-12 text-primary">
 				(20) 3. Reflections-content<br />
-				Research the internet on the topic of Node-RED, especially on a Raspberry Pi<br />
-				Why would an organization use Node-RED to develop product or service prototypes?<br />
-				<input class="form-control" name="q3" type="text" id="q3" value="prototypes">
+				Research the internet on the topic of the MagicMirror<br />
+				Why would an organization use the MagicMirror to develop product or service prototypes?<br />
+				<input class="form-control" name="q3" type="text" id="q3" value="prototypes:">
 				<hr />
 			</div>
 			<hr />
