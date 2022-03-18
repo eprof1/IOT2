@@ -87,7 +87,7 @@
 
 
             <p>
-                These instructions will show you how to download and install Zenmap onto a Raspberry Pi.<br />
+                These instructions will show you how to run Zenmap on a Raspberry Pi.<br />
                 This software is a GUI for nmap, a network security scanner.<br />
                 <br />
 
@@ -97,8 +97,7 @@
             </p>
             <p>After completing this assignment you will be able to:</p>
             <ol>
-                <li>Obtain Zenmap</li>
-                <li>Install Zenmap on a Raspberry Pi</li>
+                <li>Discuss uses of Zenmap on a Raspberry Pi</li>
                 <li>Run Zenmap</li>
                 <li>Conduct basic network security scans on the WSU guest network</li>
             </ol>
@@ -123,24 +122,21 @@
 
         <!--Exercise 1-->
 
-        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Install Zenmap</a><a href="#Exercise01"></a></div>
+        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Run Zenmap as SU</a><a href="#Exercise01"></a></div>
 
         <div id="Exercise01" class="collapse in  col-lg-12">
             <ol>
                 <li>These steps are performed on the Raspberry Pi.</li>
-                <li>Open a terminal window and enter:<br />
-                    <code>sudo apt install zenmap</code>
-                </li>
-                <li>After installation, locate and right-click Zenmap in the RPi menu under &#39;Internet&#39;, then select &#39;Properites&#39;</li>
+                <li>Locate and right-click Zenmap in the RPi menu under &#39;Internet&#39;, then select &#39;Properites&#39;</li>
                 <li>Select the Desktop Entry tab, and add sudo to the front of the Command: statement
                     <p>
-                        <a href="ZenmapProperties.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZenmapProperties.PNG', 'popup'); return false;">
-                            <img src="ZenmapProperties.PNG" width="300" alt="WaveMon functions" class="img-responsive img-responsive" /></a>Start Zenmap as SU<br />
+                        <a href="images/ZenmapProperties.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/ZenmapProperties.PNG', 'popup'); return false;">
+                            <img src="images/ZenmapProperties.PNG" width="300" alt="ZenMap start settings" class="img-responsive img-responsive" /></a>Start Zenmap as SU<br />
                     </p>
                 </li>
                 <li>Click OK </li>
-                <li>From the menu select Internet&gt;Zenmap to start it<br />
-                </li>
+                <li>From the menu select Internet&gt;Zenmap to start it<br /></li>
+                <li>Note-you can also select Internet&gt;Zenmap(as root) to start Zenmap<br /></li>
 
             </ol>
             <hr />
@@ -166,8 +162,8 @@
                     <code>10.20.85.0/24</code><br />
                     This will allow you to scan the subnet.
                     <p>
-                        <a href="ZenmapScan.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('ZenmapScan.PNG', 'popup'); return false;">
-                            <img src="ZenmapScan.PNG" width="400" alt="WaveMon functions" class="img-responsive img-responsive" /></a>Scan Settings<br />
+                        <a href="images/ZenmapScan.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/ZenmapScan.PNG', 'popup'); return false;">
+                            <img src="images/ZenmapScan.PNG" width="400" alt="WaveMon functions" class="img-responsive img-responsive" /></a>Scan Settings<br />
                     </p>
                 </li>
 
@@ -189,7 +185,7 @@
 
         <div id="Exercise03" class="collapse in  col-lg-12">
 
-            <p>Run a Quick scan of your WSU Guest subnet and take a screenshot of the results to document your work.<br />
+            <p>Run an &#39;Intense scan&#39; of your WSU Guest subnet and take a screenshot of the results to document your work.<br />
                 Note: this can be done using the Snipping Tool if you are running VNC, or use the <code>scrot</code> command if you are connected to the Raspberry Pi with a keyboard and mouse.
             </p>
 
@@ -198,14 +194,14 @@
 
                 <li>Take a screenshot.
                     <p>
-                        <a href="SampleScan.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('SampleScan.PNG', 'popup'); return false;">
-                            <img src="SampleScan.PNG" width="400" alt="WaveMon functions" class="img-responsive img-responsive" /></a>Sample Scan <br />
+                        <a href="images/SampleScan.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/SampleScan.PNG', 'popup'); return false;">
+                            <img src="images/SampleScan.PNG" width="400" alt="ZenMap sample scan" class="img-responsive img-responsive" /></a>Sample Scan <br />
                     </p>
 
 
                 </li>
 
-                <li>If on your laptop you may want to save the screenshot  as &quot;IOT04&quot; in your ' 
+                <li>If on your laptop save the screenshot  as &quot;IOT04&quot; in your ' 
              <code><span id="abPath"></span></code>
                     <script>document.getElementById("abPath").innerHTML = Path; </script>
                     ' folder.<br />
@@ -233,7 +229,7 @@
 
         <div class="col-lg-12 text-primary">
             <p>
-                (90) 1. Upload your screenshot to the &#39;IOT04&#39; D2L Assignment Folder.
+                (50) 1. Upload your screenshot to the &#39;IOT04&#39; D2L Assignment Folder.
             </p>
             <hr />
         </div>
@@ -241,77 +237,136 @@
 
 
 
+		<!--Exercise 4-->
+
+		<div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Reflections</a></div>
+
+		<div id="Exercise04" class="collapse in  col-lg-12">
+
+			<p>
+				Based on your experience in this exercise, consider the value of Zenmap/nmap for organizations, especially the Information Technology staff.<br />
+				Think about what type of problems a Raspberry Pi equipped network scanner could solve, and whether it could be cost-effective.<br />
+				Businesses are deploying IoT 'solutions'-how can ZenMap equipped Raspberry Pis support or automate these efforts?<br />
+				<br />
+				References:<br />
+				Zenmap: <a class="bg-info text-white" href="https://nmap.org/zenmap/" target="_blank">Zenmap</a><br />
+
+				Zenmap:&nbsp; <a class="bg-info text-white" href="https://nmap.org/book/zenmap.html" target="_blank">Users&#39; Guide </a><br />
+
+				W3Schools   <a href="https://www.w3schools.com/cybersecurity/cybersecurity_mapping_port_scanning.php" class="bg-info text-white" target="_blank">Zenmap</a><br />
+
+                Nmap Pi: <a href="https://www.cyberpiprojects.com/nmap-pi" class="bg-info text-white" target="_blank">Ethical Hacking</a><br />
+
+                Nmap Scan: <a href="nmapscan.pdf" class="bg-info text-white" target="_blank" >Instructions</a>
+
+			</p>
+			<p>
+				&nbsp;</p>
+
+			<div class="col-lg-12 text-primary">
+				(20) 2. Reflections-value<br />
+				List a specific problem that a low-cost network scanner could solve.<br />
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q2" type="text" id="q2" value="specific problem:">
+				<hr />
+			</div>
+
+			<hr />
+
+
+			<div class="col-lg-12 text-primary">
+				(20) 3. Reflections-content<br />
+				Research the internet on the topic of Ethical Hacking.<br />	
+                Why would an organization&#39;s security expert use nmap to scan their own organization&#39;s network?<br />
+                Hint:  <a href="https://medium.com/@dandobusiness/a-guide-to-ethical-hacking-understanding-nmap-7aea71f65554" class="bg-info text-white" target="_blank"  >Nmap
+                
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				</a>
+				<input class="form-control" name="q3" type="text" id="q3" value="scan own network:">
+				<hr />
+			</div>
+			<hr />
+
+
+
+		</div>
 
 
 
 
 
 
-        <div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
 
 
-        <div class="col-lg-12">
-            <p>
-                When all tasks are completed press the Submit button.
-            </p>
-            <hr />
-        </div>
-
-        <div class="col-lg-12 text-primary">
-            (10) 2. Assignment submission<br />
-            <!-- Enter your answer in the VALUE field below   GROK -->
-            <input class="form-control" name="q2" type="text" id="q2" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT04.">
-            <hr />
-        </div>
+		<div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
 
 
+		<div class="col-lg-12">
+			<p>
+				When all tasks are completed press the Submit button.
+			</p>
+			<hr />
+		</div>
 
-
-
-        <hr />
-
-
-        <hr />
-
-        <div class="col-lg-12">
-            <p>
-                Congratulations! You have successfully installed and used Zenmap, a network security scanner, on a Raspberry Pi single board computer.                
-            </p>
-            <hr />
-        </div>
+		<div class="col-lg-12 text-primary">
+			(10) 4. Assignment submission<br />
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input class="form-control" name="q4" type="text" id="q4" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT04.">
+			<hr />
+		</div>
 
 
 
 
-        <div class="col-lg-12 text-danger text-center">
-            <h2>-- WHEN DONE --<br />
-                SHUTDOWN THE RASPBERRY PI<br />
-                TURN OFF THE POWER<br />
-                REMOVE YOUR FLASH DRIVE
-            </h2>
-        </div>
-        <hr />
+
+		<hr />
 
 
-        <div class=" col-lg-12">
-            <br />
-            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
-            <br />
-        </div>
+		<hr />
 
-    </form>
+		<div class="col-lg-12">
+			<p>
+				Congratulations! You have used Zenmap, a network security scanner, on a Raspberry Pi single board computer.                
+			</p>
+			<hr />
+		</div>
 
-    <!-- Creative Commons License Info -->
-    <div id="xLicense" class=" col-lg-12 text-muted"></div>
 
-    <div id="xfooter" class=" col-lg-12 text-muted"></div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../ReadOnly/jquery-1.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../ReadOnly/bootstrap.js"></script>
+		<div class="col-lg-12 text-danger text-center">
+			<h2>-- WHEN DONE --<br />
+				SHUTDOWN THE RASPBERRY PI<br />
+				TURN OFF THE POWER<br />
+			</h2>
+		</div>
+		<hr />
+
+
+		<div class=" col-lg-12">
+			<br />
+			<input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
+			<br />
+		</div>
+
+	</form>
+
+	<!-- Creative Commons License Info -->
+	<div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+	<div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../../ReadOnly/jquery-1.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../ReadOnly/bootstrap.js"></script>
 
 
 </body>
 </html>
+
+
+
+
+
