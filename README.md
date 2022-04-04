@@ -14,9 +14,9 @@ Assignment Links
 * <a href="https://eprof1.github.io/IOT2/IOT05/IOT05.html" target="_blank">IOT05-RPi, Nagios</a>
 * <a href="https://eprof1.github.io/IOT2/IOT06/IOT06.html" target="_blank">IOT06-RPi Monitor</a>
 * <a href="https://eprof1.github.io/IOT2/IOT07/IOT07.html" target="_blank">IOT07-RPi, MySQL</a>
-* <a href="https://eprof1.github.io/IOT2/IOT08/IOT08.html" target="_blank">IOT08-RPi,  </a>
-* <a href="https://eprof1.github.io/IOT2/IOT09/IOT09.html" target="_blank">IOT09-RPi, </a>
-* <a href="https://eprof1.github.io/IOT2/IOT10/IOT10.html" target="_blank">IOT10-RPi, </a>
+* <a href="https://eprof1.github.io/IOT2/IOT08/IOT08.html" target="_blank">IOT08-RPi, MagicMirror </a>
+* <a href="https://eprof1.github.io/IOT2/IOT09/IOT09.html" target="_blank">IOT09-RPi, Node-RED on RPi</a>
+* <a href="https://eprof1.github.io/IOT2/IOT10/IOT10.html" target="_blank">IOT10-RPi, GrovePi+ Sensor and Actuator System</a>
 * <a href="https://eprof1.github.io/IOT2/IOTP_TTL/IOTP_TTL.html" target="_blank">IOT_TTL-RPi, USB TTL </a>
 * <a href="https://eprof1.github.io/IOT2/IOTP_Zoom/ZoomViaRPiChromiumBrowser_TerminalScreenShare.PNG" target="_blank">IOT_Zoom-RPi, Zoom-not working yet</a>
 * <a href="https://eprof1.github.io/IOT2/NR01/NR01.html" target="_blank">NR01-Node-RED on RPi</a>
